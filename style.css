@@ -1,0 +1,227 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    /* background-color: #FFFE71; */
+    background-color: #88ABFF;
+}
+
+.wrapper {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 265px);
+    gap: 20px;
+}
+
+.wrapper li {
+    background-color: #fff;
+    padding: 40px;
+    list-style: none;
+    height: 250px;
+    padding: 15px 20px 20px;
+}
+.create_button{
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+
+.create_button,
+.icon ,.popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.create_button .icon {
+    height: 78px;
+    width: 78px;
+    font-size: 50px;
+    font-weight: 200;
+    color: #88ABFF;
+    /* color: #FAFA37; */
+    /* border: 2px dashed #FAFA37; */
+    border: 2px dashed #88ABFF;
+    border-radius: 50%;
+    font-family: serif;
+}
+
+.create_button p {
+    color: #88ABFF;
+    /* color: #FAFA37; */
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.note span {
+    /* display: block; */
+    font-size: 16px;
+    color: #827e7e;
+    margin-top: 5px;
+   
+}
+
+.note {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.settings {
+    display: flex;
+    justify-content: space-between;
+    color: #827e7e;
+    border-top: 1px solid #ccc;
+}
+
+.date {
+    margin-top: 5px;
+}
+
+.menu {
+    margin-top: 10px;
+    position: relative;
+    padding: 10px;
+}
+
+.note_title {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 430;
+}
+
+.options {
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    transform-origin: bottom right;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+}
+
+.settings.show .options {
+    transform: scale(1);
+}
+
+.options li {
+    height: 35px;
+    width: 100px;
+    padding: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.options li:hover {
+    background-color: #F5F5F5;
+}
+
+.options li i {
+    font-size: 13px;
+    color: rgb(94, 90, 90);
+}
+
+.popup_box {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    transition: 0.6s ease;
+}
+
+.popup {
+    z-index: 3;
+    width: 400px;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: 0.6s ease;
+    
+}
+
+.content {
+    width: calc(100% - 15px);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.popup_box header {
+    padding: 20px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.popup_box header p ,popup_icon {
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.6s ease;
+}
+
+.content form {
+    margin: 15px 25px 35px;
+   
+}
+.content label{
+    font-size: 19px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+    color: #413f3f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.content form :where(input,textarea){
+    width: 100%;
+    border: 2px solid #999;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    padding: 0 15px;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+.content form textarea{
+    height: 150px;
+    resize: none;
+    padding: 10px;
+}
+.content form .row{
+    margin-bottom: 20px;
+}
+button{
+    width: 100%;
+    height: 50px;
+    font-weight: 500;
+    /* background-color: #FAFA37; */
+    background-color: #88ABFF;
+    /* color: #fff; */
+    color: #252424;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.popup_box,.popup_box .popup{
+    display: none;
+}
+.show{
+    display: flex !important;
+}
